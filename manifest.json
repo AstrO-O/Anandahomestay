@@ -1,0 +1,59 @@
+{
+  "name": "Aananda Homestay - Peaceful Stay in Lubhu, Lalitpur, Nepal",
+  "short_name": "Aananda",
+  "description": "Book a comfortable, home-like stay in Lubhu, Lalitpur, Nepal with deluxe rooms, a master bedroom suite, rooftop lounge, and warm hospitality.",
+  "id": "/",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#E8E2D9",
+  "theme_color": "#2C3B2D",
+  "categories": [
+    "travel",
+    "lodging"
+  ],
+  "icons": [
+    {
+      "src": "IMG/Logo/Logo 2.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "IMG/Logo/Logo 2.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Book a Stay",
+      "short_name": "Book",
+      "description": "Open the booking contact section",
+      "url": "/#contact",
+      "icons": [
+        {
+          "src": "IMG/Logo/Logo 2.png",
+          "sizes": "96x96",
+          "type": "image/png"
+        }
+      ]
+    },
+    {
+      "name": "View Rooms",
+      "short_name": "Rooms",
+      "description": "View rooms and spaces at Aananda Homestay",
+      "url": "/#services",
+      "icons": [
+        {
+          "src": "IMG/Logo/Logo 2.png",
+          "sizes": "96x96",
+          "type": "image/png"
+        }
+      ]
+    }
+  ],
+  "prefer_related_applications": false
+}

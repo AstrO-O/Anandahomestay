@@ -1,0 +1,19 @@
+User-agent: *
+Allow: /
+Disallow: /cdn-cgi/
+Disallow: /admin/
+Disallow: /*.pdf$
+
+Sitemap: https://aanandahomestay.com.np/sitemap.xml
+
+User-agent: AhrefsBot
+Crawl-delay: 10
+
+User-agent: SemrushBot
+Crawl-delay: 10
+
+User-agent: MJ12bot
+Crawl-delay: 10
+
+User-agent: DotBot
+Crawl-delay: 10

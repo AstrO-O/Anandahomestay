@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
 
   <!-- Open Graph -->
 
@@ -74,7 +75,13 @@
   }
   </script>
 
-  <link rel="icon" type="image/x-icon" href="IMG/Logo/Logo 2.png">
+  <!-- Favicon / PWA -->
+  <link rel="icon" type="image/png" sizes="32x32" href="IMG/Logo/Logo 2.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="IMG/Logo/Logo 2.png">
+  <link rel="apple-touch-icon" href="IMG/Logo/Logo 2.png">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#2C3B2D">
+  <meta name="msapplication-TileColor" content="#2C3B2D">
 
   <!-- Preconnect for faster font loading -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -101,12 +108,14 @@
       <a href="#amenities">Amenities</a>
       <a href="#gallery">Gallery</a>
       <a href="#location">Location</a>
+      <a href="#faq">FAQ</a>
       <a href="#contact">Contact Us</a>
       <a href="https://wa.me/9779741833003?text=Hello!%20I'd%20like%20to%20book%20a%20stay." target="_blank"
         rel="noopener noreferrer" class="nav-cta">Book a Stay</a>
     </div>
     <!-- Hamburger Button — outside nav-links -->
-    <button class="nav-toggle" aria-label="Toggle navigation" id="navToggle">
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="navLinks"
+      id="navToggle">
       <span class="hamburger"></span>
     </button>
   </nav>
@@ -382,9 +391,7 @@
               <div class="loc-icon"><img src="IMG/ICON/email.png" alt="" width="18" height="18" aria-hidden="true">
               </div>
               <div class="loc-info"><strong>Email</strong><span><a
-                    href="/cdn-cgi/l/email-protection#d6bfb8b0b996b7b8b7b8b2b7beb9bbb3a5a2b7aff8b5b9bbf8b8a6"><span
-                      class="__cf_email__"
-                      data-cfemail="365f585059765758575852575e595b534542574f1855595b185846">[email&#160;protected]</span></a></span>
+                    href="mailto:aanandahomestay@gmail.com">aanandahomestay@gmail.com</a></span>
               </div>
             </div>
             <div class="loc-row">
@@ -406,6 +413,47 @@
       </div>
     </section>
 
+
+    <!-- FAQ -->
+    <section id="faq">
+      <div class="faq-head sr">
+        <div class="section-label">Guest information</div>
+        <h2 class="serif">Frequently asked questions</h2>
+        <p class="body-text">Quick answers to help you plan your stay at Aananda Homestay.</p>
+      </div>
+      <div class="faq-grid sr sr-d1">
+        <article class="faq-item">
+          <h3>What are the check-in and check-out times?</h3>
+          <p>Check-in starts from 12:00 PM and check-out is by 11:00 AM. Early check-in may be possible depending on
+            availability.</p>
+        </article>
+        <article class="faq-item">
+          <h3>Do rooms include air conditioning?</h3>
+          <p>Air conditioning is available as an optional upgrade in the rooms. Pricing differs for A/C and non-A/C
+            stays.</p>
+        </article>
+        <article class="faq-item">
+          <h3>Is parking available?</h3>
+          <p>Yes, on-site parking is available for guests. Please mention parking needs when booking.</p>
+        </article>
+        <article class="faq-item">
+          <h3>Can I use the kitchen?</h3>
+          <p>Yes, guests can use the shared kitchen and dining area. Complimentary tea and coffee are also available.
+          </p>
+        </article>
+        <article class="faq-item">
+          <h3>Do you offer airport pickup or drop?</h3>
+          <p>Airport pickup and drop can be arranged at an extra charge. Contact us on WhatsApp for the quickest
+            coordination.</p>
+        </article>
+        <article class="faq-item">
+          <h3>What is the fastest way to book?</h3>
+          <p>WhatsApp is the fastest option. You can also call directly or send a message using the contact form below.
+          </p>
+        </article>
+      </div>
+    </section>
+
     <!-- CONTACT -->
     <section id="contact">
       <div class="contact-inner">
@@ -421,6 +469,34 @@
             <a href="tel:+9779741833003" class="btn-phone"><img src="IMG/ICON/Phone.png" alt="" width="18" height="18"
                 aria-hidden="true">Call Now</a>
           </div>
+          <form id="contactForm" class="contact-form" action="https://api.web3forms.com/submit" method="POST" novalidate>
+            <input type="hidden" name="access_key" value="bf45704d-3b90-4f1a-a907-ccca9cddab9c">
+            <input type="hidden" name="subject" value="New Contact Form Submission - Aananda Homestay">
+            <input type="hidden" name="from_name" value="Aananda Homestay Website">
+            <input type="hidden" name="redirect" value="https://aanandahomestay.com.np/#contact">
+            <div class="form-row">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" autocomplete="name" placeholder="Your full name" required>
+            </div>
+            <div class="form-row two-col">
+              <div>
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" autocomplete="email" placeholder="you@example.com" required>
+              </div>
+              <div>
+                <label for="phone">Phone</label>
+                <input type="tel" id="phone" name="phone" autocomplete="tel" placeholder="+977 98XXXXXXXX" required>
+              </div>
+            </div>
+            <div class="form-row">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="4"
+                placeholder="Tell us your dates, room preference, and number of guests" required></textarea>
+            </div>
+            <input type="checkbox" name="botcheck" class="hp-field" style="display:none;" tabindex="-1" autocomplete="off" aria-hidden="true">
+            <button type="submit" class="form-submit">Send inquiry</button>
+            <div id="formMessage" class="form-message" role="status" aria-live="polite"></div>
+          </form>
         </div>
         <div class="contact-cards sr sr-d1">
           <a href="tel:+9779741833003" class="c-card">
@@ -467,7 +543,7 @@
       <img src="IMG/Logo/Logo 2.png" alt="Aananda Homestay logo">
       <span>Aananda Homestay</span>
     </div>
-    <div class="footer-right">© 2025 Aananda Homestay · Lubhu, Lalitpur, Nepal</div>
+    <div class="footer-right">© 2026 Aananda Homestay · Lubhu, Lalitpur, Nepal</div>
   </footer>
 
   <!-- FABs -->
